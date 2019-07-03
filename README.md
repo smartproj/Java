@@ -1,2 +1,4 @@
 # Java
-Java learning
+Classes and Objects
+Variables, arrays, data types
+Operators, methods
