@@ -1,4 +1,2 @@
 # Java
-Classes and Objects
-Variables, arrays, data types
-Operators, methods
+Classes and objects, variables, arrays, data types, operators, methods.
