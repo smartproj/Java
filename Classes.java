@@ -1,20 +1,20 @@
-public class Bicycle {
+public class Car {
         
-    // the Bicycle class has
+    // the Car class has
     // three fields
     public int cadence;
     public int gear;
     public int speed;
         
-    // the Bicycle class has
+    // the Car class has
     // one constructor
-    public Bicycle(int startCadence, int startSpeed, int startGear) {
+    public Car(int startCadence, int startSpeed, int startGear) {
         gear = startGear;
         cadence = startCadence;
         speed = startSpeed;
     }
         
-    // the Bicycle class has
+    // the Car class has
     // four methods
     public void setCadence(int newValue) {
         cadence = newValue;
