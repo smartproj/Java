@@ -1,35 +1,59 @@
-public class Car {
-        
-    // the Car class has
-    // three fields
-    public int cadence;
-    public int gear;
-    public int speed;
-        
-    // the Car class has
-    // one constructor
-    public Car(int startCadence, int startSpeed, int startGear) {
-        gear = startGear;
-        cadence = startCadence;
-        speed = startSpeed;
+/**
+   A simulated car that consumes gas as it drives.
+*/
+public class Car
+{
+    private double milesDriven;
+    private double gasInTank;
+    private double milesPerGallon;
+
+
+    /**
+       Constructs a car with a given fuel efficiency.
+       @param mpg the miles per gallon of this car
+    */
+    public Car(double mpg)
+    {
+        milesDriven = 0;
+        gasInTank = 0;
+        milesPerGallon = mpg;
     }
-        
-    // the Car class has
-    // four methods
-    public void setCadence(int newValue) {
-        cadence = newValue;
+
+
+    /** Adds gas to the tank of this car.
+     @param amount the amount of gas to add
+    */
+    public void addGas(double amount)
+    {
+        gasInTank = gasInTank + amount;
     }
-        
-    public void setGear(int newValue) {
-        gear = newValue;
+
+    /**
+       Gets the current amount of gas in the tank of this car.
+       @return the current gas level
+    */
+    public double getGasInTank()
+    {
+        return gasInTank;
     }
-        
-    public void applyBrake(int decrement) {
-        speed -= decrement;
+
+    /**
+       Drives this car by a given distance.
+       @param distance the distance to drive
+    */
+    public void drive(double distance)
+    {
+        milesDriven = milesDriven + distance;
+        double gasConsumed = distance / milesPerGallon;
+        gasInTank = gasInTank - gasConsumed;
     }
-        
-    public void speedUp(int increment) {
-        speed += increment;
+
+    /**
+       Gets the current mileage of this car.
+       @return the total number of miles driven
+    */
+    public double getMilesDriven()
+    {
+        return milesDriven;
     }
-        
 }
